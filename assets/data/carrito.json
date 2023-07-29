@@ -1,0 +1,50 @@
+{
+    "usuario": "nombre_usuario",
+    "productos": [
+      {
+        "id": 4,
+        "nombre": "Sudadera",
+        "descripcion": "Sudadera con capucha y bolsillos",
+        "precio": 28.99,
+        "color": "Gris",
+        "talla": "XL",
+        "cantidad": 1,
+        "imagen": "https://picsum.photos/200/300"
+      },
+      {
+        "id": 5,
+        "nombre": "Falda",
+        "descripcion": "Falda plisada de cuero",
+        "precio": 39.99,
+        "color": "Negro",
+        "talla": "M",
+        "cantidad": 2,
+        "imagen": "https://picsum.photos/500/300"
+      },
+      {
+        "id": 6,
+        "nombre": "Chaqueta",
+        "descripcion": "Chaqueta acolchada con cierre",
+        "precio": 55.99,
+        "color": "Azul Marino",
+        "talla": "S",
+        "cantidad": 1,
+        "imagen": "https://picsum.photos/300/300"
+      },
+      {
+        "id": 7,
+        "nombre": "Blusa",
+        "descripcion": "Blusa con estampado floral",
+        "precio": 24.99,
+        "color": "Blanco y Azul",
+        "talla": "L",
+        "cantidad": 3,
+        "imagen": "https://picsum.photos/100/300"
+      }
+    ],
+    "subtotal": 267.93,
+    "descuento": 20.00,
+    "envio": 7.50,
+    "total": 255.43
+  }
+  
