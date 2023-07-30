@@ -6,11 +6,11 @@ const categorias = [
     id: 1,
     nombre: "Hombres",
     imagen1: {
-      uri: "https://picsum.photos/200/300",
+      uri: "https://i.postimg.cc/DyQ9WNQ6/pantalones.png",
       descripcion: "Pantalones",
     },
     imagen2: {
-      uri: "https://picsum.photos/200/301",
+      uri: "https://i.postimg.cc/brQK9S14/chaqueta.png",
       descripcion: "Chaquetas",
     },
   },
@@ -18,11 +18,11 @@ const categorias = [
     id: 2,
     nombre: "Mujeres",
     imagen1: {
-      uri: "https://picsum.photos/200/302",
+      uri: "https://i.postimg.cc/XqdTkHRV/vc.png",
       descripcion: "Vestidos Casuales",
     },
     imagen2: {
-      uri: "https://picsum.photos/200/303",
+      uri: "https://i.postimg.cc/05KTdjvV/lenceria.png",
       descripcion: "Lenceria",
     },
   },
@@ -30,11 +30,11 @@ const categorias = [
     id: 3,
     nombre: "Ninos",
     imagen1: {
-      uri: "https://picsum.photos/200/304",
+      uri: "https://i.postimg.cc/1tnxf5MV/nn.png",
       descripcion: "Conjuntos",
     },
     imagen2: {
-      uri: "https://picsum.photos/200/305",
+      uri: "https://i.postimg.cc/W12Q07Xv/bb.png",
       descripcion: "Ropa de Bebe",
     },
   },
@@ -42,11 +42,11 @@ const categorias = [
     id: 4,
     nombre: "Otaku",
     imagen1: {
-      uri: "https://picsum.photos/200/306",
+      uri: "https://i.postimg.cc/J7XV80G9/kp.png",
       descripcion: "KpoP",
     },
     imagen2: {
-      uri: "https://picsum.photos/200/307",
+      uri: "https://i.postimg.cc/SswB8FtT/cos.png",
       descripcion: "Cosplay",
     },
   },

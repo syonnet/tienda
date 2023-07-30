@@ -1,144 +1,171 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, ImageBackground, Image } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const MiCuentaScreen = () => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <ImageBackground source={{ uri: 'https://picsum.photos/800/1200' }} style={styles.backgroundImage}>
-        <View style={styles.contentContainer}>
-          <View style={styles.avatarContainer}>
-            <Icon name="person-circle-outline" size={80} color="#666" />
-            <Text style={styles.usuarioTexto}>Nombre de Usuario</Text>
-          </View>
-          <Text style={styles.seccionTitulo}>Lista de Deseos</Text>
-          <View style={styles.seccionContainer}>
-            <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Lista de Deseos')}>
-              <Icon name="heart-outline" size={24} color="#fff" />
-              <Text style={styles.opcionTexto}>Guardados</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Siguiendo')}>
+      <View style={[styles.section, styles.header]}>
+        <Icon name="person-circle-outline" size={80} color="#f10404" />
+        <Text style={styles.username}>Nombre de Usuario</Text>
+      </View>
+      <View style={[styles.section, styles.deseos]}>
+        <Text style={styles.sectionTitle}>Lista de Deseos</Text>
+        <View style={styles.row}>
+          <TouchableOpacity onPress={() => alert('Visualiza tus articulos guardados anteriormente')}>
+            <View style={styles.iconContainer}>
+              <Icon name="bookmark-outline" size={24} color="#fff" />
+            </View>
+            <Text style={styles.iconText}>Guardados</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => alert('Todos tus articulos que seguiste una vez estan aqui')}>
+            <View style={styles.iconContainer}>
               <Icon name="person-add-outline" size={24} color="#fff" />
-              <Text style={styles.opcionTexto}>Siguiendo</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Historial')}>
+            </View>
+            <Text style={styles.iconText}>Siguiendo</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => alert('Historial')}>
+            <View style={styles.iconContainer}>
               <Icon name="time-outline" size={24} color="#fff" />
-              <Text style={styles.opcionTexto}>Historial</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Cupones')}>
+            </View>
+            <Text style={styles.iconText}>Historial</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => alert('Aplica tusCupones')}>
+            <View style={styles.iconContainer}>
               <Icon name="pricetag-outline" size={24} color="#fff" />
-              <Text style={styles.opcionTexto}>Cupones</Text>
-            </TouchableOpacity>
-          </View>
-          <Text style={styles.seccionTitulo}>Tus Compras</Text>
-          <View style={styles.seccionContainer}>
-          <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Pedidos')}>
-            <Icon name="receipt-outline" size={24} color="#fff" />
-            <Text style={styles.opcionTexto}>Pedidos</Text>
+            </View>
+            <Text style={styles.iconText}>Cupones</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Enviado')}>
-            <Icon name="checkbox-outline" size={24} color="#fff" />
-            <Text style={styles.opcionTexto}>Enviado</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Pagar')}>
-            <Icon name="card-outline" size={24} color="#fff" />
-            <Text style={styles.opcionTexto}>Pagar</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Calificación')}>
-            <Icon name="star-outline" size={24} color="#fff" />
-            <Text style={styles.opcionTexto}>Calificación</Text>
-          </TouchableOpacity>
-          </View>
-          <Text style={styles.seccionTitulo}>Ofertas</Text>
-          <View style={styles.promocionContainer}>
-            <Image source={{ uri: 'https://picsum.photos/400/200' }} style={styles.promocionImagen} />
-          </View>
-          <Text style={styles.seccionTitulo}>Favoritos</Text>
-          <View style={styles.seccionContainer}>
-          <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Favoritos')}>
-            <Icon name="bookmark-outline" size={24} color="#fff" />
-            <Text style={styles.opcionTexto}>Favoritos</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Ropa')}>
-            <Icon name="shirt-outline" size={24} color="#fff" />
-            <Text style={styles.opcionTexto}>Ropa</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Zapatos')}>
-            <Icon name="barbell-outline" size={24} color="#fff" />
-            <Text style={styles.opcionTexto}>Zapatos</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.opcionContainer} onPress={() => alert('Accesorios')}>
-            <Icon name="car" size={24} color="#fff" />
-            <Text style={styles.opcionTexto}>Accesorios</Text>
-          </TouchableOpacity>
-          </View>
-          <Text style={styles.finalTexto}>Gracias por usar nuestra APP</Text>
         </View>
-      </ImageBackground>
+      </View>
+      <View style={styles.bannerContainer}>
+        <Image source={{ uri: 'https://i.postimg.cc/JzKv994G/b1.png' }} style={styles.bannerImage} />
+      </View>
+      <View style={[styles.section, styles.compras]}>
+        <Text style={styles.sectionTitle}>Tus Compras</Text>
+        <View style={styles.row}>
+          <TouchableOpacity onPress={() => alert('Encuentra todos tus Pedidos')}>
+            <View style={styles.iconContainer}>
+              <Icon name="receipt-outline" size={24} color="#fff" />
+            </View>
+            <Text style={styles.iconText}>Pedidos</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => alert('Sigue tus pedidos en esta seccion')}>
+            <View style={styles.iconContainer}>
+              <Icon name="checkbox-outline" size={24} color="#fff" />
+            </View>
+            <Text style={styles.iconText}>Enviado</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => alert('Todos tus articulos que estan por pagar')}>
+            <View style={styles.iconContainer}>
+              <Icon name="card-outline" size={24} color="#fff" />
+            </View>
+            <Text style={styles.iconText}>Pagar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => alert('Calificaciones dadas a tus vendedores')}>
+            <View style={styles.iconContainer}>
+              <Icon name="star-outline" size={24} color="#fff" />
+            </View>
+            <Text style={styles.iconText}>Calificación</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={[styles.section, styles.soporte]}>
+        <Text style={styles.sectionTitle}>Soporte</Text>
+        <View style={styles.row}>
+          <TouchableOpacity onPress={() => alert('Bienvenido a Whatsapp Bot')}>
+            <View style={styles.iconContainer}>
+              <Icon name="logo-whatsapp" size={24} color="#fff" />
+            </View>
+            <Text style={styles.iconText}>Whatsapp</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => alert('Soporte en linea las 24 horas')}>
+            <View style={styles.iconContainer}>
+              <Icon name="call-outline" size={24} color="#fff" />
+            </View>
+            <Text style={styles.iconText}>Phone</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => alert('Necesitas chatear con alguien , te ayudaremos en seguida')}>
+            <View style={styles.iconContainer}>
+              <Icon name="people-circle-outline" size={24} color="#fff" />
+            </View>
+            <Text style={styles.iconText}>Chat</Text>
+          </TouchableOpacity>
+          
+        </View>
+      </View>
+      <Text style={styles.footer}>Gracias por usar nuestra APP</Text>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    padding: 20,
   },
-  contentContainer: {
-    flex: 1,
-    padding: 16,
-    backgroundColor: 'rgba(255, 255, 255, 0.9)', // Fondo semi-transparente
+  section: {
+    marginBottom: 20,
+    borderRadius: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  //  alignItems: 'center',
+
   },
-  backgroundImage: {
-    flex: 1,
-  },
-  avatarContainer: {
+  header: {
     alignItems: 'center',
-    marginBottom: 24,
+    backgroundColor: '#f1c40f',
   },
-  usuarioTexto: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginTop: 8,
+  deseos: {
+    backgroundColor: '#3498db',
   },
-  seccionTitulo: {
+  compras: {
+    backgroundColor: '#27ae60',
+  },
+  soporte: {
+    backgroundColor: '#e74c3c',
+  },
+  sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 8,
+    marginBottom: 10,
+    color: '#090101',
   },
-  seccionContainer: {
+  row: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  iconContainer: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#666',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  iconText: {
+    color: '#fff',
+    textAlign: 'center',
+    marginTop: 5,
+  },
+  bannerContainer: {
     alignItems: 'center',
     marginVertical: 12,
-    backgroundColor: '#007bff',
-    borderRadius: 8,
-    paddingVertical: 8,
   },
-  opcionContainer: {
-    alignItems: 'center',
-  },
-  opcionTexto: {
-    fontSize: 16,
-    color: '#fff',
-    marginTop: 8,
-  },
-  promocionContainer: {
-    alignItems: 'center',
-    height: 150,
-    borderRadius: 8,
-    overflow: 'hidden',
-    marginBottom: 16,
-  },
-  promocionImagen: {
+  bannerImage: {
     width: '100%',
-    height: '100%',
+    height: 100,
+    borderRadius: 10,
   },
-  finalTexto: {
+  footer: {
+    textAlign: 'center',
+    marginTop: 20,
+  },
+  username: {
     fontSize: 18,
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 24,
+    marginTop: 10,
+    color: '#090101',
   },
 });
 

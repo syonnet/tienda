@@ -9,7 +9,7 @@
         "color": "Gris",
         "talla": "XL",
         "cantidad": 1,
-        "imagen": "https://picsum.photos/200/300"
+        "imagen": "https://i.postimg.cc/mrnfLsbp/sudadera.png"
       },
       {
         "id": 5,
@@ -19,7 +19,7 @@
         "color": "Negro",
         "talla": "M",
         "cantidad": 2,
-        "imagen": "https://picsum.photos/500/300"
+        "imagen": "https://i.postimg.cc/63GsTmqW/falda.png"
       },
       {
         "id": 6,
@@ -29,7 +29,7 @@
         "color": "Azul Marino",
         "talla": "S",
         "cantidad": 1,
-        "imagen": "https://picsum.photos/300/300"
+        "imagen": "https://i.postimg.cc/brQK9S14/chaqueta.png"
       },
       {
         "id": 7,
@@ -39,7 +39,7 @@
         "color": "Blanco y Azul",
         "talla": "L",
         "cantidad": 3,
-        "imagen": "https://picsum.photos/100/300"
+        "imagen": "https://i.postimg.cc/brX7n9SQ/blusa.png"
       }
     ],
     "subtotal": 267.93,

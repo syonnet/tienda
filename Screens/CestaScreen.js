@@ -27,11 +27,11 @@ const CestaScreen = () => {
         contentContainerStyle={styles.listContainer}
       />
       <View style={styles.buttonsContainer}>
-        <TouchableOpacity style={styles.confirmarButton} onPress={() => alert('Venta confirmada')}>
+        <TouchableOpacity style={styles.confirmarButton} onPress={() => alert('Venta de la Chaqueta de Luigi confirmada')}>
           <Icon name="checkmark-outline" size={24} color="#fff" />
           <Text style={styles.buttonText}>Confirmar Venta</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.cancelarButton} onPress={() => alert('Venta cancelada')}>
+        <TouchableOpacity style={styles.cancelarButton} onPress={() => alert('Venta de la Sudadera cancelada')}>
           <Icon name="close-outline" size={24} color="#fff" />
           <Text style={styles.buttonText}>Cancelar</Text>
         </TouchableOpacity>
